@@ -22,12 +22,25 @@ int isPalindrome(int a)
 		return 0;
 	}
 }
+int power(int a,int b){//a^b
+	if (b==0){
+		return 1;
+	}
+	while (b>1)
+	{
+		 a=a*a;
+		 --b;
+	}
+	return a;
+	
+}
 
 int help(int a,int sum,int count)
 {
 	if(a != 0)
 	{
-		sum=pow((a%10), count);
+		sum=power((a%10), count);
+
 		sum+=help(a/10,sum,count);
 	}
 	if(a==0)

@@ -23,17 +23,15 @@ int isPalindrome(int a)
 	}
 }
 int power(int a,int b){//a^b
-	if (b==0){
-		return 1;
-	}
-	while (b>1)
+	int result=1;
+	for (int  i = 0; i < b; i++)
 	{
-		 a=a*a;
-		 --b;
+		result=result*a;
 	}
-	return a;
+	return result;
 	
 }
+
 
 int help(int a,int sum,int count)
 {

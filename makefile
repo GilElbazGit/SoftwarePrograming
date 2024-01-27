@@ -35,11 +35,11 @@ libclassrec.so: $(OBJECTS_LIB1) $(OBJECTS_LIB3)
 $(OBJECTS_MAIN): main.c NumClass.h
 	$(cc) $(FLAGS) -c main.c
 $(OBJECTS_LIB1): basicClassification.c NumClass.h
-	$(cc) $(FLAGS) -c basicClassification.c
+	$(cc) $(FLAGS) -fPIC -c basicClassification.c
 $(OBJECTS_LIB2): advancedClassificationLoop.c NumClass.h
-	$(cc) $(FLAGS) -c advancedClassificationLoop.c
+	$(cc) $(FLAGS) -fPIC -c advancedClassificationLoop.c
 $(OBJECTS_LIB3): advancedClassificationRecursion.c NumClass.h
-	$(cc) $(FLAGS) -c advancedClassificationRecursion.c
+	$(cc) $(FLAGS) -fPIC -c advancedClassificationRecursion.c
 
 
 .PHONY: clean all

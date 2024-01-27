@@ -1,8 +1,8 @@
 cc=gcc
 AR=ar
 OBJECTS_MAIN=main.o
-OBJECTS_LIB1=baiscClassification.o
-OBJECTS_LIB2=advancedClassificat.o
+OBJECTS_LIB1=basicClassification.o
+OBJECTS_LIB2=advancedClassificationLoop.o
 OBJECTS_LIB3=advancedClassificationRecursion.o
 FLAGS= -Wall -g
 
@@ -34,10 +34,10 @@ libclassrec.so: $(OBJECTS_LIB1) $(OBJECTS_LIB3)
 
 $(OBJECTS_MAIN): main.c NumClass.h
 	$(cc) $(FLAGS) -c main.c
-$(OBJECTS_LIB1): baiscClassification.c NumClass.h
-	$(cc) $(FLAGS) -c baiscClassification.c
-$(OBJECTS_LIB2): advancedClassificat.c NumClass.h
-	$(cc) $(FLAGS) -c advancedClassificat.c
+$(OBJECTS_LIB1): basicClassification.c NumClass.h
+	$(cc) $(FLAGS) -c basicClassification.c
+$(OBJECTS_LIB2): advancedClassificationLoop.c NumClass.h
+	$(cc) $(FLAGS) -c advancedClassificationLoop.c
 $(OBJECTS_LIB3): advancedClassificationRecursion.c NumClass.h
 	$(cc) $(FLAGS) -c advancedClassificationRecursion.c
 

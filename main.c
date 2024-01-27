@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "NumClass.h"
-#include <math.h>
 
 int main()
 {
@@ -14,8 +13,14 @@ int main()
         printf ("ERROR! \n");
         printf("enter two positive numbers \n");
     }
-    int max =fmax(a,b);
-    int min =fmin(a,b);
+    int max =a;
+    int min=b;
+    if(a<b)
+    {
+        max =b;
+        min=a;
+    }
+    
 
     printf("The Armstrong numbers are:");
     for(int i = min; i <= max; i++)

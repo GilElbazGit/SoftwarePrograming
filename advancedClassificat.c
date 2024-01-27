@@ -24,16 +24,7 @@ int isPalindrome(int a)
 		return 0;
 	}
 }
-int power (int a,int b){ //a^b
-	if (b==0){
-		return 1;
-	}
-	while (b>1){
-		a=a*a;
-		--b;
-	}	
-	return a;
-}
+
 
 
 int isArmstrong(int a)
@@ -49,11 +40,14 @@ int isArmstrong(int a)
     temp=a;
     while (temp!=0)
     {
-        int ans=power((temp%10),count);
-        sum+=ans;
+		int dig=temp%10;
 		temp/=10;
+		int ans=1;
+		for(int i=1;i<=count;i++){
+			ans=ans*dig;
+		}
+        sum+=ans;
     }
-    
 	if(a==sum)
 	{
 		return 1;

@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "NumClass.h"
-#include <math.h>
 
 int revers(int a)
 {  
@@ -25,6 +24,15 @@ int isPalindrome(int a)
 		return 0;
 	}
 }
+int pow (int a,int b){ //a^b
+	while (b>1){
+		a=a*a;
+		--b;
+	}	
+	return a;
+}
+
+
 int isArmstrong(int a)
 {
     int count =0;
@@ -38,7 +46,7 @@ int isArmstrong(int a)
     temp=a;
     while (temp!=0)
     {
-        double ans=pow((double)(temp%10),(double)count);
+        int ans=pow((temp%10),count);
         sum+=ans;
 		temp/=10;
     }

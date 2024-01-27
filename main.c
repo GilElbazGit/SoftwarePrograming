@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "NumClass.h"
+#define true 1
 
 int main()
 {
@@ -25,7 +26,7 @@ int main()
     printf("The Armstrong numbers are:");
     for(int i = min; i <= max; i++)
     {
-        if(isArmstrong(i)==1)
+        if(isArmstrong(i)==true)
         {
             printf(" %d", i);
         }
@@ -35,7 +36,7 @@ int main()
     printf("The Palindromes are:");
     for(int i = min; i <= max; i++)
     {
-        if(isPalindrome(i)==1)
+        if(isPalindrome(i)==true)
         {
             printf(" %d", i);
         }
@@ -45,7 +46,7 @@ int main()
     printf("The Prime numbers are:");
     for(int i = min; i <= max; i++)
     {
-        if(isPrime(i)==1)
+        if(isPrime(i)==true)
         {
             printf(" %d", i);
         }
@@ -55,7 +56,7 @@ int main()
     printf("The Strong numbers are:");
     for(int i = min; i <= max; i++)
     {
-        if(isStrong(i)==1)
+        if(isStrong(i)==true)
         {
             printf(" %d", i);
         }

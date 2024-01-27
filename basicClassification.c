@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "NumClass.h"
+#define true 1
+#define false 0
 
 int isPrime(int a)
 {
@@ -9,16 +11,16 @@ int isPrime(int a)
     }
     if(a==1)
     {
-        return 1;
+        return true;
     }
     for(int i = 2 ;i < a;i++)
     {
         if(a % i == 0)
         {
-            return 0;
+            return false;
         }
     }
-    return 1;
+    return true;
 }
 
 int atzeret(int a)
@@ -41,7 +43,7 @@ int isStrong(int a)
 {
     if(a==0)
     {
-        return 0;
+        return false;
     }
     int save=a;
     int sum=0;
@@ -53,10 +55,10 @@ int isStrong(int a)
     }
     if(save==sum)
     {
-        return 1;
+        return true;
     }
     else
     {
-        return 0;
+        return false;
     }
 }

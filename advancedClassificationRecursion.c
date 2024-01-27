@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "NumClass.h"
+#define true 1
+#define false 0
 
 int revers(int a,int temp)
 {
@@ -15,11 +17,11 @@ int isPalindrome(int a)
 	int temp =revers(a,0);
 	if(a==temp)
 	{
-		return 1;
+		return true;
 	}
 	else
 	{
-		return 0;
+		return false;
 	}
 }
 int power(int a,int b){//a^b
@@ -62,10 +64,10 @@ int isArmstrong(int a)
 	int sum=help(a,0,count);
 	if(a==sum)
 	{
-		return 1;
+		return true;
 	}
 	else
 	{
-		return 0;
+		return false;
 	}
 }
